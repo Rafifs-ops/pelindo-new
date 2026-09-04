@@ -1,6 +1,6 @@
 <x-layout>
     <x-frontend.jumbotron>
-        <x-slot name="title">{{ __('messages.program_pjsl') }}</x-slot>
+        <x-slot name="title">{{ __('messages.program_tjsl') }}</x-slot>
         <x-slot name="subtitle">Program Tanggung Jawab Sosial dan Lingkungan (TJSL)</x-slot>
     </x-frontend.jumbotron>
 

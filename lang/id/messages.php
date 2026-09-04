@@ -5,7 +5,8 @@ return [
     'profile' => 'Profile',
     'investor' => 'Investor',
     'tata_kelola' => 'Tata Kelola',
-    'pjsl' => 'PJSL',
+    'pjsl' => 'TJSL',
+    'tjsl' => 'TJSL',
     'media' => 'Media',
     'layanan' => 'Layanan',
     'branch' => 'Branch (Cabang)',
@@ -28,8 +29,9 @@ return [
     'kebijakan_smt' => 'Kebijakan Sistem Manajemen Terpadu',
     'rups' => 'RUPS',
     
-    // PJSL Sub Menus
-    'program_pjsl' => 'Program PJSL',
+    // TJSL Sub Menus
+    'program_pjsl' => 'Program TJSL',
+    'program_tjsl' => 'Program TJSL',
     
     // Media Sub Menus
     'siaran_pers' => 'Siaran Pers',

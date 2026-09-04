@@ -5,7 +5,8 @@ return [
     'profile' => 'Profile',
     'investor' => 'Investor',
     'tata_kelola' => 'Governance',
-    'pjsl' => 'CSR',
+    'pjsl' => 'TJSL',
+    'tjsl' => 'TJSL',
     'media' => 'Media',
     'layanan' => 'Services',
     'branch' => 'Branch',
@@ -28,8 +29,9 @@ return [
     'kebijakan_smt' => 'Integrated Management System Policy',
     'rups' => 'GMS (General Meeting of Shareholders)',
     
-    // PJSL Sub Menus
-    'program_pjsl' => 'CSR Programs',
+    // TJSL Sub Menus
+    'program_pjsl' => 'TJSL Programs',
+    'program_tjsl' => 'TJSL Programs',
     
     // Media Sub Menus
     'siaran_pers' => 'Press Releases',

@@ -3,6 +3,10 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+[x-cloak] {
+    display: none !important;
+}
+
 @theme {
     --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
@@ -21,6 +25,7 @@
 }
 
 @layer utilities {
+
     /* Background gradients */
     .bg-gradient-pmt {
         background: linear-gradient(135deg, #00528C 0%, #0066AE 50%, #00A3E0 100%);
@@ -35,12 +40,12 @@
     }
 
     /* Core Claymorphism Tokens & Classes */
-    
+
     /* 1. Base Clay Card (Light Surface) */
     .clay-card {
         background: #FFFFFF;
         border-radius: 1.75rem;
-        box-shadow: 
+        box-shadow:
             8px 12px 28px -4px rgba(5, 94, 170, 0.09),
             -6px -6px 20px 0px rgba(255, 255, 255, 0.95),
             inset 2px 2px 4px 0px rgba(255, 255, 255, 0.9),
@@ -49,10 +54,11 @@
     }
 
     /* 2. Interactive Clay Card with springy hover */
-    .clay-card-interactive, .bento-card {
+    .clay-card-interactive,
+    .bento-card {
         background: #FFFFFF;
         border-radius: 1.75rem;
-        box-shadow: 
+        box-shadow:
             8px 12px 28px -4px rgba(5, 94, 170, 0.09),
             -6px -6px 20px 0px rgba(255, 255, 255, 0.95),
             inset 2px 2px 4px 0px rgba(255, 255, 255, 0.9),
@@ -61,18 +67,20 @@
         transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    .clay-card-interactive:hover, .bento-card:hover {
+    .clay-card-interactive:hover,
+    .bento-card:hover {
         transform: translateY(-5px);
-        box-shadow: 
+        box-shadow:
             12px 20px 36px -4px rgba(5, 94, 170, 0.16),
             -8px -8px 24px 0px rgba(255, 255, 255, 1),
             inset 2px 2px 4px 0px rgba(255, 255, 255, 1),
             inset -2px -2px 8px 0px rgba(5, 94, 170, 0.07);
     }
 
-    .clay-card-interactive:active, .bento-card:active {
+    .clay-card-interactive:active,
+    .bento-card:active {
         transform: translateY(-1px) scale(0.99);
-        box-shadow: 
+        box-shadow:
             4px 6px 16px -2px rgba(5, 94, 170, 0.1),
             -4px -4px 12px 0px rgba(255, 255, 255, 0.9),
             inset 3px 3px 6px 0px rgba(5, 94, 170, 0.08);
@@ -82,7 +90,7 @@
     .clay-card-soft {
         background: linear-gradient(145deg, #FFFFFF 0%, #E8F4FA 100%);
         border-radius: 1.75rem;
-        box-shadow: 
+        box-shadow:
             8px 12px 28px -4px rgba(0, 102, 174, 0.08),
             -6px -6px 20px 0px rgba(255, 255, 255, 0.95),
             inset 2px 2px 5px 0px rgba(255, 255, 255, 1),
@@ -95,7 +103,7 @@
         background: linear-gradient(135deg, #0072C2 0%, #005A9E 100%);
         color: #FFFFFF;
         border-radius: 1.75rem;
-        box-shadow: 
+        box-shadow:
             8px 14px 30px -4px rgba(0, 82, 140, 0.35),
             -4px -4px 16px 0px rgba(255, 255, 255, 0.2),
             inset 2px 2px 4px 0px rgba(255, 255, 255, 0.4),
@@ -104,12 +112,13 @@
     }
 
     /* 5. Frosted Clay Floating Panel */
-    .clay-panel, .glass-panel {
+    .clay-panel,
+    .glass-panel {
         background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         border-radius: 1.5rem;
-        box-shadow: 
+        box-shadow:
             0 10px 30px -5px rgba(5, 94, 170, 0.1),
             0 -2px 10px 0 rgba(255, 255, 255, 0.8),
             inset 1px 1px 2px rgba(255, 255, 255, 0.9),
@@ -123,7 +132,7 @@
         color: #FFFFFF;
         font-weight: 700;
         border-radius: 9999px;
-        box-shadow: 
+        box-shadow:
             0 8px 20px -2px rgba(0, 102, 174, 0.38),
             -2px -2px 8px 0px rgba(255, 255, 255, 0.3),
             inset 2px 2px 4px 0px rgba(255, 255, 255, 0.45),
@@ -137,7 +146,7 @@
 
     .clay-btn-primary:hover {
         transform: translateY(-3px);
-        box-shadow: 
+        box-shadow:
             0 12px 26px -2px rgba(0, 102, 174, 0.48),
             -3px -3px 10px 0px rgba(255, 255, 255, 0.4),
             inset 2px 2px 5px 0px rgba(255, 255, 255, 0.55),
@@ -146,7 +155,7 @@
 
     .clay-btn-primary:active {
         transform: translateY(1px) scale(0.97);
-        box-shadow: 
+        box-shadow:
             0 3px 10px -1px rgba(0, 102, 174, 0.3),
             inset 3px 3px 6px 0px rgba(0, 30, 60, 0.4);
     }
@@ -156,7 +165,7 @@
         color: #0066AE;
         font-weight: 700;
         border-radius: 9999px;
-        box-shadow: 
+        box-shadow:
             0 6px 18px -2px rgba(0, 102, 174, 0.12),
             -3px -3px 10px 0px rgba(255, 255, 255, 0.9),
             inset 2px 2px 4px 0px rgba(255, 255, 255, 0.9),
@@ -172,7 +181,7 @@
         transform: translateY(-3px);
         background: linear-gradient(145deg, #FFFFFF 0%, #D8ECF8 100%);
         color: #00528C;
-        box-shadow: 
+        box-shadow:
             0 10px 24px -2px rgba(0, 102, 174, 0.18),
             -4px -4px 14px 0px rgba(255, 255, 255, 1),
             inset 2px 2px 4px 0px rgba(255, 255, 255, 1),
@@ -181,7 +190,7 @@
 
     .clay-btn-secondary:active {
         transform: translateY(1px) scale(0.97);
-        box-shadow: 
+        box-shadow:
             0 2px 6px 0 rgba(0, 102, 174, 0.1),
             inset 2px 2px 5px 0 rgba(0, 102, 174, 0.15);
     }
@@ -191,12 +200,6 @@
         color: #0066AE;
         font-weight: 700;
         border-radius: 9999px;
-        box-shadow: 
-            0 10px 25px -3px rgba(0, 0, 0, 0.15),
-            -3px -3px 10px 0 rgba(255, 255, 255, 0.8),
-            inset 2px 2px 4px rgba(255, 255, 255, 0.9),
-            inset -2px -2px 4px rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.9);
         transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
         display: inline-flex;
         align-items: center;
@@ -207,7 +210,7 @@
         transform: translateY(-3px);
         background: #F8FCFF;
         color: #00528C;
-        box-shadow: 
+        box-shadow:
             0 16px 32px -4px rgba(0, 0, 0, 0.2),
             -4px -4px 14px 0 rgba(255, 255, 255, 1),
             inset 2px 2px 4px rgba(255, 255, 255, 1);
@@ -222,7 +225,7 @@
         color: #FFFFFF;
         font-weight: 700;
         border-radius: 9999px;
-        box-shadow: 
+        box-shadow:
             0 8px 20px -2px rgba(255, 107, 74, 0.4),
             -2px -2px 8px 0 rgba(255, 255, 255, 0.3),
             inset 2px 2px 4px rgba(255, 255, 255, 0.45),
@@ -236,7 +239,7 @@
 
     .clay-btn-accent:hover {
         transform: translateY(-3px);
-        box-shadow: 
+        box-shadow:
             0 12px 26px -2px rgba(255, 107, 74, 0.5),
             inset 2px 2px 5px rgba(255, 255, 255, 0.55);
     }
@@ -245,7 +248,7 @@
     .clay-input {
         background: #F0F6FA;
         border-radius: 9999px;
-        box-shadow: 
+        box-shadow:
             inset 3px 3px 6px 0px rgba(0, 70, 120, 0.1),
             inset -3px -3px 6px 0px rgba(255, 255, 255, 0.9),
             0 1px 2px 0px rgba(255, 255, 255, 0.5);
@@ -257,7 +260,7 @@
         outline: none;
         background: #FFFFFF;
         border-color: #0066AE;
-        box-shadow: 
+        box-shadow:
             inset 2px 2px 5px 0px rgba(0, 102, 174, 0.08),
             inset -2px -2px 5px 0px rgba(255, 255, 255, 0.9),
             0 0 0 4px rgba(0, 102, 174, 0.18);
@@ -266,7 +269,7 @@
     .clay-input-box {
         background: #F0F6FA;
         border-radius: 1.25rem;
-        box-shadow: 
+        box-shadow:
             inset 3px 3px 6px 0px rgba(0, 70, 120, 0.09),
             inset -3px -3px 6px 0px rgba(255, 255, 255, 0.9);
         border: 1px solid rgba(0, 102, 174, 0.12);
@@ -277,7 +280,7 @@
         outline: none;
         background: #FFFFFF;
         border-color: #0066AE;
-        box-shadow: 
+        box-shadow:
             inset 2px 2px 4px 0px rgba(0, 102, 174, 0.06),
             0 0 0 4px rgba(0, 102, 174, 0.18);
     }
@@ -292,7 +295,7 @@
         text-transform: uppercase;
         padding: 0.4rem 1.1rem;
         border-radius: 9999px;
-        box-shadow: 
+        box-shadow:
             3px 5px 12px 0px rgba(0, 102, 174, 0.09),
             -2px -2px 6px 0px rgba(255, 255, 255, 0.95),
             inset 1px 1px 2px 0px rgba(255, 255, 255, 1),
@@ -305,7 +308,7 @@
     .clay-badge-primary {
         background: linear-gradient(145deg, #0077CC 0%, #005CA3 100%);
         color: #FFFFFF;
-        box-shadow: 
+        box-shadow:
             2px 4px 10px 0px rgba(0, 82, 140, 0.3),
             inset 1px 1px 2px 0px rgba(255, 255, 255, 0.4);
         border: 1px solid rgba(255, 255, 255, 0.25);

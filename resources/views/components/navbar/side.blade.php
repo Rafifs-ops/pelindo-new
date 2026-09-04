@@ -34,7 +34,7 @@
              <div x-show="activeMenu === '{{ __($menu->name_key) }}'" class="grid {{ count($menu->children) > 2 && $menu->name_key !== 'messages.investor' ? 'grid-cols-2' : 'grid-cols-1' }} gap-4">
                  @foreach($menu->children as $child)
                  <a href="{{ Route::has($child->route_name) ? route($child->route_name) : '#' }}" 
-                    class="group relative {{ $menu->name_key == 'messages.investor' ? 'p-6 min-h-[140px] flex flex-col justify-end' : ($menu->name_key == 'messages.pjsl' ? 'h-48' : ($menu->name_key == 'messages.tata_kelola' ? 'h-36' : 'h-44')) }} clay-card-interactive overflow-hidden {{ ($menu->name_key == 'messages.tata_kelola' && $child->name_key == 'messages.rups') ? 'col-span-2' : '' }} block border-2 border-white/90">
+                    class="group relative {{ $menu->name_key == 'messages.investor' ? 'p-6 min-h-[140px] flex flex-col justify-end' : ($menu->name_key == 'messages.tjsl' || $menu->name_key == 'messages.pjsl' ? 'h-48' : ($menu->name_key == 'messages.tata_kelola' ? 'h-36' : 'h-44')) }} clay-card-interactive overflow-hidden {{ ($menu->name_key == 'messages.tata_kelola' && $child->name_key == 'messages.rups') ? 'col-span-2' : '' }} block border-2 border-white/90">
                      
                      @if($menu->name_key == 'messages.investor')
                          <div class="absolute inset-0 bg-gradient-to-t from-[#0F243C]/95 via-[#0066AE]/75 to-transparent z-10 group-hover:from-[#00528C]/95 transition-colors duration-300"></div>
@@ -51,7 +51,7 @@
                          <div class="absolute inset-0 bg-gradient-to-t from-[#0F243C]/95 via-[#0066AE]/60 to-transparent group-hover:from-[#00528C]/90 transition-colors duration-300"></div>
                          <div class="absolute inset-0 p-4 flex flex-col justify-end z-20">
                              <div class="w-6 h-1 bg-[#38BDF8] rounded-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                             <span class="text-white drop-shadow-sm {{ $menu->name_key == 'messages.tata_kelola' ? ($child->name_key == 'messages.pedoman_tata_kelola' || $child->name_key == 'messages.kode_etik_bisnis' ? 'font-bold text-sm' : 'font-extrabold text-sm leading-tight') : ($menu->name_key == 'messages.pjsl' ? 'font-extrabold text-lg' : 'font-extrabold text-base leading-tight') }}">
+                             <span class="text-white drop-shadow-sm {{ $menu->name_key == 'messages.tata_kelola' ? ($child->name_key == 'messages.pedoman_tata_kelola' || $child->name_key == 'messages.kode_etik_bisnis' ? 'font-bold text-sm' : 'font-extrabold text-sm leading-tight') : ($menu->name_key == 'messages.tjsl' || $menu->name_key == 'messages.pjsl' ? 'font-extrabold text-lg' : 'font-extrabold text-base leading-tight') }}">
                                  {{ __($child->name_key) }}
                              </span>
                          </div>

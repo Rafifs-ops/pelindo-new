@@ -73,10 +73,11 @@ Route::prefix('layanan')->group(function () {
     })->name('layanan.branch.detail');
 });
 
-// PJSL
-Route::prefix('pjsl')->group(function () {
-    Route::get('/', fn() => view('pages.pjsl.index'))->name('pjsl.index');
+// TJSL
+Route::prefix('tjsl')->group(function () {
+    Route::get('/', fn() => view('pages.pjsl.index'))->name('tjsl.index');
 });
+Route::get('/pjsl', fn() => redirect()->route('tjsl.index'))->name('pjsl.index');
 
 // Media
 Route::prefix('media')->group(function () {

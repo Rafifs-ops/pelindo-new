@@ -4,7 +4,6 @@
          style="background-image: url('/images/pelabuhan-3.jpeg')">
     <!-- Smooth dual gradient overlay -->
     <div class="absolute inset-0 bg-gradient-to-b from-[#0F243C]/85 via-[#0F243C]/65 to-[#EEF5F9] mix-blend-multiply"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#EEF5F9] via-transparent to-transparent opacity-90"></div>
 
     <!-- Ambient glow -->
     <div class="absolute top-1/2 left-0 w-80 h-80 bg-[#0066AE]/20 rounded-full filter blur-3xl pointer-events-none"></div>
@@ -26,7 +25,7 @@
         <div class="max-w-4xl mx-auto space-y-6">
             @foreach($terminals->take(6) as $index => $terminal)
             <div x-data="{ expanded: false }" 
-                 class="clay-card-interactive relative z-10 transition-all duration-300 overflow-hidden" 
+                 class="relative z-10 transition-all duration-300 overflow-hidden" 
                  :class="{ 'shadow-[12px_20px_40px_rgba(0,102,174,0.15)] scale-[1.01] z-20': expanded }">
                 
                 <button @click="expanded = !expanded" 

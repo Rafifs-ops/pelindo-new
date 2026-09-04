@@ -13,7 +13,7 @@
             
             <!-- Left Image (Claymorphism Frame) -->
             <div class="lg:col-span-5 relative group">
-                <div class="clay-card p-3.5 relative z-10 overflow-hidden transform group-hover:-translate-y-2 transition-transform duration-500 shadow-2xl bg-white/90 backdrop-blur-md border border-white/80">
+                <div class="p-3.5 relative z-10 overflow-hidden transform group-hover:-translate-y-2 transition-transform duration-500">
                     <div class="rounded-2xl overflow-hidden relative shadow-inner">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" 
                              alt="About PMT" 
@@ -38,12 +38,12 @@
                 </h2>
                 
                 <!-- Clay Elevated Content Box -->
-                <div class="clay-card p-8 md:p-10 mb-8 relative overflow-hidden bg-white/95 backdrop-blur-md border border-white/90 shadow-2xl">
+                <div class="mb-8 relative overflow-hidden bg-transparent">
                     <div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed font-normal">
-                        <p>
+                        <p class="text-white">
                             Pelindo Multi Terminal / PMT merupakan anak usaha PT Pelindo (Persero) yang fokus pada pengelolaan operasional terminal non-petikemas/multipurpose. PMT dalam kegiatan operasionalnya mengelola 37 Branch yang tersebar di wilayah Sumatera, Jawa, Kalimantan, hingga Sulawesi.
                         </p>
-                        <p>
+                        <p class="text-white">
                             PMT saat ini juga mengelola 3 Anak Perusahaan, yaitu PT Pelabuhan Tanjung Priok (PTP), PT Indonesia Kendaraan Terminal, Tbk. (IPCC) yang merupakan terminal kendaraan terbesar di ASEAN, dan PT Terminal Curah Utama (TCU).
                         </p>
                     </div>
